@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Entrega II — Diogo Souza Castro</title>
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="page-root">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Diogo Castro</a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">☰</button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li class="has-submenu">
+            <a href="projects.html">Projetos</a>
+            <ul class="submenu">
+              <li><a href="#web">Web</a></li>
+              <li><a href="#design">Design</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <section class="hero card">
+      <h1>Entrega II — Interface com CSS3</h1>
+      <p>Projeto demonstrando grid, flexbox, componentização e design system em CSS.</p>
+      <a class="btn primary" href="projects.html">Ver projetos</a>
+    </section>
+
+    <section class="cards-area">
+      <article class="card">
+        <h2>Card 1</h2>
+        <p>Exemplo de card responsivo com imagem e ação.</p>
+        <div class="card-actions">
+          <button class="btn">Detalhes</button>
+          <span class="badge">Novo</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Card 2</h2>
+        <p>Outro card para demonstrar colunas do grid.</p>
+        <div class="card-actions">
+          <button class="btn">Detalhes</button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Diogo Souza Castro — Entrega II</p>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite">Mensagem de teste</div>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navList = document.getElementById('nav-list');
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      navList.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
